@@ -19,7 +19,7 @@ SAMPLE_SIZE = 8000
 init = requests.get("https://beacon.nist.gov/beacon/2.0/pulse/last").json()
 nextUri = init["pulse"]["listValues"][0]["uri"]
 
-for i in range(8000):
+for i in range(SAMPLE_SIZE):
 	success = False
 	while not success: #keep trying until the request succeeds, guaranteeing <SAMPLE_SIZE> values
 		request = requests.get(nextUri)
