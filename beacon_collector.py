@@ -5,6 +5,14 @@
 
 import requests
 import time
+import os
+
+cwd = os.getcwd()
+dataPath = cwd + "/data/"
+try:
+	os.mkdir(dataPath)
+except:
+	pass
 
 SAMPLE_SIZE = 8000
 
@@ -23,7 +31,7 @@ for i in range(8000):
 			
 			nextUri = response["pulse"]["listValues"][0]["uri"]
 
-			f = open('beacon_values.csv', 'a')
+			f = open(dataPath + 'beacon_values.csv', 'a')
 
 			f.write(str(response["pulse"]["localRandomValue"]) + ',')
 

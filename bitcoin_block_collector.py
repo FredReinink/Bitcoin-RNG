@@ -6,6 +6,14 @@
 
 import requests
 import time
+import os
+
+cwd = os.getcwd()
+dataPath = cwd + "/data/"
+try:
+	os.mkdir(dataPath)
+except:
+	pass
 
 previous_block_hash = ""
 
@@ -26,7 +34,7 @@ while(True):
 
 				previous_block_hash = block["hash"]
 
-				f = open('bitcoin_blocks.csv', 'a')
+				f = open(dataPath + 'bitcoin_blocks.csv', 'a')
 
 				f.write(str(block["hash"]) + ',')
 				f.write(str(block["ver"]) + ',')
