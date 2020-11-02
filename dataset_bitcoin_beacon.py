@@ -12,7 +12,7 @@ Creates a bytes object from the bitcoin block fields containing some unpredictab
 def extract_values(block):
 	fields = block.split(',')
 
-	# add markel root
+	# add merkel root
 	result = binascii.unhexlify(fields[3])
 
 	# add time
