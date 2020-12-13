@@ -7,7 +7,7 @@
 import requests
 import time
 
-SAMPLE_SIZE = 10000
+SAMPLE_SIZE = 40000
 
 request = requests.get("https://blockchain.info/latestblock")
 
