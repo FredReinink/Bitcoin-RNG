@@ -1,4 +1,6 @@
-In our project, we implement the algorithm for a randomness beacon based on Bitcoin test the output using randomness test recommended by NIST. The results are compared against NIST's randomness beacon.
+In this project, we implement the algorithm for a randomness beacon based on entropy in Bitcoin blockchain headers. We test the output using a randomness test recommended by NIST, and benchmark the results against an existing beacon.
+
+We conclude that a randomness beacon constructed with the entropy in bitcoin headers does in fact provide uniform and unpredictable randomness, though at a slower rate than many existing beacons.
 
 beacon_collector.py and bitcoin_dataset_collector.py were used to collect data from the NIST beacon and about bitcoin blocks, respectively.
 
@@ -11,3 +13,6 @@ https://github.com/usnistgov/SP800-90B_EntropyAssessment
 
 The tests used for evaluating randomness can be found here:
 https://csrc.nist.gov/Projects/Random-Bit-Generation/Documentation-and-Software
+
+The NIST randomness beacon can be found here:
+https://beacon.nist.gov/home
