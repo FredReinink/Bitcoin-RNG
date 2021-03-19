@@ -1,4 +1,4 @@
-In this project, we implement the algorithm for a randomness beacon based on entropy in Bitcoin blockchain headers. We test the output using a randomness test recommended by NIST, and benchmark the results against an existing beacon.
+In this project, we implement an algorithm for a randomness beacon based on entropy in Bitcoin blockchain headers. We test the output using a randomness test recommended by NIST, and benchmark the results against an existing beacon.
 
 We conclude that a randomness beacon constructed with the entropy in bitcoin headers does in fact provide uniform and unpredictable randomness, though at a slower rate than many existing beacons.
 
